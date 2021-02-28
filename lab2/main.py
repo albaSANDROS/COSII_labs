@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 def main():
     n = 8
     arguments = np.arange(0, n) * np.pi / 10
-    function_values_1 = list(map(np.sin, arguments))
-    function_values_2 = list(map(np.cos, arguments))
+    function_values_1 = list(map(lambda x: np.cos(2 * x), arguments))
+    function_values_2 = list(map(lambda x: np.sin(5 * x), arguments))
 
     basic_correlation = Operations.basic_function(function_values_1, function_values_2, 1)
     print('Basic correlation complexity: {}'.format(Operations.counter))
